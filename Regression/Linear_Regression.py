@@ -45,10 +45,10 @@ avg_loss /= len(x)
 root_mean_square_error = np.sqrt(root_mean_square_error / len(x))
 
     
-print(f"m = {m:.{n}f}")
-print(f"b = {b:.{n}f}")
-print(f"Regression function: y(x) = {m:.{n}f} * x + {b:.{n}f}")
+print(f"Regression function: y={b:.{n}f}+{m:.{n}f}*x")
+'''
 print(f"Sai so trung binh h E_1(f) = {avg_loss:.{n}f}")
 print(f"Can bac 2 tong cac binh phuong sai so: E_2(f) = {root_mean_square_error:.{n}f}")
 print(f"Sai so cuc dai E_inf(f) = {max_loss:.{n}f}")
 print(f"Tieu chi binh phuong toi thieu: L(m, b) = {Lmb:.{n}f}")
+'''

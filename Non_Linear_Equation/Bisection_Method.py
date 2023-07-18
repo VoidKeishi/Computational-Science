@@ -2,17 +2,17 @@ import math
 
 #Define f(x)
 def f(x):
-    return math.e**x - 2
+    return x**3-x-1
 
 #Set range [a,b] (Interval of solution separation)
-a=0
+a=1
 b=2
 
 #Set epsilon (Accuracy)
-epsilon=0.01
+epsilon=0.02
 
 #Set decimal places
-d=4
+d=7
 
 #Define bisection method
 def bisection_method(f, a, b, epsilon):
