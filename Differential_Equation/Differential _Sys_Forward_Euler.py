@@ -22,6 +22,9 @@ z0 = 1
 #Number of steps
 n = int((b-a)/h)
 
+#Decimal places
+d = 4
+
 #Euler's method (No change)
 def euler_modified(y0, z0, a, b, h, n):
     x = np.zeros(n + 1)
@@ -38,5 +41,5 @@ def euler_modified(y0, z0, a, b, h, n):
 
 x, y, z = euler_modified(y0 = y0, z0 = z0, a = a, b = b, h = h, n = n)
 print(f'x: {x[n]}')
-print(f'y: {y[n]}')
-print(f'z: {z[n]}')
+print(f'y: {y[n]:.{d}f}')
+print(f'z: {z[n]:.{d}f}')

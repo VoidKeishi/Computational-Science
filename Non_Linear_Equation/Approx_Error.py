@@ -10,7 +10,7 @@ a = -2
 b = -1
 x0 = -1.37
 #Number of decimal places
-n = 5
+d = 4
 
 #Approximate error
 def approx_error(x0):
@@ -20,4 +20,4 @@ def approx_error(x0):
     c = f(x0)/min
     return c
 
-print(f'{approx_error(x0):.{n}f}')
+print(f'{approx_error(x0):.{d}f}')
