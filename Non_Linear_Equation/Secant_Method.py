@@ -33,8 +33,3 @@ if approx_solution is not None:
     print("Approx solution:", approx_solution)
 else:
     print("Can't find solution")
-
-print(f(0.03382908559165535))
-print(f(0.0012))
-print(f(0.001))
-print(f(0.0011))
