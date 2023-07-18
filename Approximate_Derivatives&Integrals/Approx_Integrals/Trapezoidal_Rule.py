@@ -3,19 +3,19 @@ import math
 
 # Define f(x), f''(x) (self define)
 def f(x):
-    return 2*x**4 + x**3 + 1
+    return 2*x**4+x**3+1
 def f_2nd_derivative(x):
-    return 24*x**2 + 6*x
+    return 24*x**2+6*x
 
 # Set range [a,b]
 a = 1
 b = 2
 
 # Set number of divide range
-N = 3
+N = 4
 
 # Set decimal places
-d = 4
+d = 1
 
 # Define trapezoidal
 def trapezoidal_rule(a,b,N):

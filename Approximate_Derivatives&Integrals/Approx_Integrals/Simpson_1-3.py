@@ -3,17 +3,22 @@ import math
 
 # Define f(x), f''(x) (self define)
 def f(x):
-    return 1/(x+1)
+    return math.log(2.7*x+5.6)
+def f_4th_derivative(x):
+    return -318.8646/(2.7*x+5.6)**4
 
 # Set range [a,b]
 a = 0
 b = 1
 
 # Set number of divide range
-N = 10
+N = 4
 
 # Set decimal places
-d = 5
+d = 6
+
+# Set epsilon
+epsilon = 1e-5
 
 # Define simpson 1/3
 def simpson_1_3(a,b,N):
@@ -35,8 +40,15 @@ def simpson_1_3(a,b,N):
         else:
             sum_odd = sum_odd + y[i]
     approx= (b-a)*(y[0]+4*sum_odd+2*sum_even+y[N])/(3*N)
-    return approx
+    M = abs(f_4th_derivative(a))
+    if M<abs(f_4th_derivative(b)):
+        M = abs(f_4th_derivative(b))
+    error = M*(b-a)/180*h**4
+    min_n = round(math.sqrt(math.sqrt((b-a)**5*M/(180*epsilon))))
+    return approx, error, min_n
 
 # Call
-approx = simpson_1_3(a,b,N)
+approx, error, min_n = simpson_1_3(a,b,N)
 print(f'{approx:.{d}f}')
+print(f'{error:.{d}f}')
+print(min_n)
